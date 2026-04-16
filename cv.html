@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Muhammad Talha Saeed</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #f5f5f5 0%, #e8e8f0 100%);
+      padding: 20px;
+      animation: fadeIn 0.6s ease-in;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 50px 40px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+      border-radius: 12px;
+      animation: slideUp 0.8s ease-out;
+    }
+    
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    header {
+      border-bottom: 3px solid #007bff;
+      padding-bottom: 25px;
+      margin-bottom: 35px;
+      animation: slideDown 0.8s ease-out;
+    }
+    
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    h1 {
+      font-size: 2.5em;
+      color: #007bff;
+      margin-bottom: 10px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    
+    .contact-info {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.9em;
+      color: #666;
+      animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+    
+    .contact-info a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-info a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+      transform: translateY(-2px);
+    }
+    
+    section {
+      margin-bottom: 35px;
+      animation: fadeIn 0.8s ease-out both;
+    }
+    
+    section:nth-child(2) { animation-delay: 0.1s; }
+    section:nth-child(3) { animation-delay: 0.2s; }
+    section:nth-child(4) { animation-delay: 0.3s; }
+    section:nth-child(5) { animation-delay: 0.4s; }
+    section:nth-child(6) { animation-delay: 0.5s; }
+    section:nth-child(7) { animation-delay: 0.6s; }
+    
+    h2 {
+      font-size: 1.5em;
+      color: #007bff;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+    
+    h2:hover {
+      color: #0056b3;
+      border-bottom-color: #0056b3;
+    }
+    
+    .entry {
+      margin-bottom: 25px;
+      padding: 15px;
+      background: #f9f9fb;
+      border-left: 4px solid #007bff;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      animation: slideInLeft 0.6s ease-out both;
+    }
+    
+    .entry:hover {
+      background: #f0f4ff;
+      transform: translateX(5px);
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+    }
+    
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .entry-title {
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #222;
+      transition: color 0.3s ease;
+    }
+    
+    .entry:hover .entry-title {
+      color: #007bff;
+    }
+    
+    .entry-meta {
+      color: #999;
+      font-size: 0.9em;
+      font-style: italic;
+      background: #e8f4f8;
+      padding: 3px 10px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+    
+    .entry:hover .entry-meta {
+      background: #007bff;
+      color: white;
+    }
+    
+    .entry-description {
+      color: #555;
+      margin-top: 8px;
+      line-height: 1.7;
+    }
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    
+    .skill-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      background: #f9f9fb;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      animation: scaleIn 0.6s ease-out both;
+    }
+    
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    .skill-item:hover {
+      background: #f0f4ff;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+    }
+    
+    .skill-name {
+      font-weight: 600;
+      color: #333;
+      font-size: 0.95em;
+    }
+    
+    .skill-bar {
+      width: 120px;
+      height: 8px;
+      background: #e0e0e0;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-left: 15px;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .skill-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #007bff, #0056b3);
+      border-radius: 4px;
+      width: 0;
+      animation: fillBar 1.2s ease-out forwards;
+      box-shadow: 0 2px 6px rgba(0, 123, 255, 0.4);
+    }
+    
+    @keyframes fillBar {
+      to {
+        width: 100%;
+      }
+    }
+    
+    .tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+      animation: fadeIn 0.8s ease-out;
+    }
+    
+    .tag {
+      background: linear-gradient(135deg, #e8f4f8, #f0f8ff);
+      color: #007bff;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      border: 1.5px solid #007bff;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      cursor: default;
+      animation: popIn 0.6s ease-out both;
+    }
+    
+    .tag:nth-child(1) { animation-delay: 0.1s; }
+    .tag:nth-child(2) { animation-delay: 0.2s; }
+    .tag:nth-child(3) { animation-delay: 0.3s; }
+    
+    @keyframes popIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    .tag:hover {
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    }
+    
+    h3 {
+      color: #007bff;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      font-size: 1.1em;
+      font-weight: 700;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e0e0e0;
+      transition: all 0.3s ease;
+    }
+    
+    h3:hover {
+      color: #0056b3;
+      border-bottom-color: #007bff;
+    }
+    
+    section p {
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 12px;
+      animation: fadeIn 0.8s ease-out;
+    }
+    
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .container {
+        box-shadow: none;
+        padding: 20px;
+        border-radius: 0;
+      }
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px 20px;
+        border-radius: 8px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-info {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .entry-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .skill-bar {
+        width: 100px;
+        margin-left: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- HEADER -->
+    <header>
+      <h1>Muhammad Talha Saeed</h1>
+      <div class="contact-info">
+        <span>📧 <a href="mailto:talhasaeed4903@gmail.com">talhasaeed4903@gmail.com</a></span>
+        <span>📍 Islamabad, Pakistan</span>
+        <span>🔗 <a href="https://github.com/M-Talha-Saeed1">GitHub</a></span>
+        <span>💼 <a href="https://M-Talha-Saeed1.github.io">Portfolio</a></span>
+      </div>
+    </header>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section>
+      <h2>Professional Summary</h2>
+      <p>Computer Science student at Bahria University with strong foundation in C++ programming, data structures, and algorithms. Committed to building efficient solutions through hands-on projects and continuous learning. Demonstrated ability to progress from fundamental programming concepts to advanced object-oriented design and algorithmic optimization.</p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+      <h2>Education</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Bachelor of Science in Computer Science</span>
+          <span class="entry-meta">In Progress</span>
+        </div>
+        <div class="entry-description">
+          Bahria University, Islamabad, Pakistan
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+      <h2>Projects</h2>
+      
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">BU Gram – Social Media Platform</span>
+          <span class="entry-meta">Featured Project</span>
+        </div>
+        <div class="entry-description">
+          A dedicated social media platform designed for Bahria University students to connect, share experiences, and collaborate on academic and social activities.
+        </div>
+        <div class="tags">
+          <span class="tag">Web Application</span>
+          <span class="tag">Social Media</span>
+          <span class="tag">Student Platform</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Workout & Diet Planner</span>
+          <span class="entry-meta">Semester 1</span>
+        </div>
+        <div class="entry-description">
+          Console-based application built with fundamental C++ concepts for managing daily workout routines and dietary plans. Demonstrates basic programming logic and user interaction design.
+        </div>
+        <div class="tags">
+          <span class="tag">C++</span>
+          <span class="tag">Console Application</span>
+          <span class="tag">Fundamentals</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Workout & Diet Planner – OOP Version</span>
+          <span class="entry-meta">Semester 2</span>
+        </div>
+        <div class="entry-description">
+          Improved version leveraging Object-Oriented Programming concepts including classes, inheritance, and polymorphism. Showcases progression in software design skills and code organization.
+        </div>
+        <div class="tags">
+          <span class="tag">C++</span>
+          <span class="tag">OOP</span>
+          <span class="tag">Design Patterns</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Huffman Encoder</span>
+          <span class="entry-meta">Semester 3</span>
+        </div>
+        <div class="entry-description">
+          Data Structures and Algorithms implementation using Huffman coding for file compression. Demonstrates efficient algorithm design and tree-based data structure manipulation.
+        </div>
+        <div class="tags">
+          <span class="tag">C++</span>
+          <span class="tag">Data Structures</span>
+          <span class="tag">Algorithms</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <h2>Technical Skills</h2>
+      
+      <h3>Programming Languages</h3>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <span class="skill-name">C++</span>
+          <div class="skill-bar"><div class="skill-fill" style="width: 90%; animation-delay: 0.1s;"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Python</span>
+          <div class="skill-bar"><div class="skill-fill" style="width: 75%; animation-delay: 0.2s;"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">HTML & CSS</span>
+          <div class="skill-bar"><div class="skill-fill" style="width: 70%; animation-delay: 0.3s;"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">JavaScript</span>
+          <div class="skill-bar"><div class="skill-fill" style="width: 65%; animation-delay: 0.4s;"></div></div>
+        </div>
+      </div>
+
+      <h3>Core Competencies</h3>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <span class="skill-name">Data Structures & Algorithms</span>
+          <div class="skill-bar"><div class="skill-fill" style="width: 85%; animation-delay: 0.5s;"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Object-Oriented Programming</span>
+          <div class="skill-bar"><div class="skill-fill" style="width: 80%; animation-delay: 0.6s;"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Problem Solving & Logic</span>
+          <div class="skill-bar"><div class="skill-fill" style="width: 88%; animation-delay: 0.7s;"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Database Management Systems</span>
+          <div class="skill-bar"><div class="skill-fill" style="width: 60%; animation-delay: 0.8s;"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Computer Organization & Assembly</span>
+          <div class="skill-bar"><div class="skill-fill" style="width: 65%; animation-delay: 0.9s;"></div></div>
+        </div>
+      </div>
+
+      <h3>Tools & Platforms</h3>
+      <div class="tags">
+        <span class="tag">Git</span>
+        <span class="tag">GitHub</span>
+        <span class="tag">VS Code</span>
+        <span class="tag">Windows</span>
+        <span class="tag">Linux</span>
+        <span class="tag">Command Line</span>
+      </div>
+    </section>
+
+    <!-- STRENGTHS -->
+    <section>
+      <h2>Key Strengths</h2>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div class="entry">
+          <div class="entry-title">Strong C++ Proficiency</div>
+          <div class="entry-description">
+            Proficient in C++ with experience in console applications, OOP, and data structures.
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-title">Algorithmic Problem Solving</div>
+          <div class="entry-description">
+            Strong analytical mindset with focus on efficient algorithm design through DSA.
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-title">Continuous Learner</div>
+          <div class="entry-description">
+            Dedicated to expanding knowledge in software development and computer fundamentals.
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-title">Full-Stack Curiosity</div>
+          <div class="entry-description">
+            Exploring web development and full-stack technologies to build complete applications.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERESTS -->
+    <section>
+      <h2>Interests & Goals</h2>
+      <p>Passionate about software development with a focus on building efficient, scalable solutions. Interested in exploring opportunities in backend development, systems programming, and algorithm optimization. Committed to continuous learning and contributing to meaningful projects that solve real-world problems.</p>
+    </section>
+
+  </div>
+</body>
+</html>
+<body>
+  <div class="container">
+    <!-- HEADER -->
+    <header>
+      <h1>Muhammad Talha Saeed</h1>
+      <div class="contact-info">
+        <span>📧 <a href="mailto:talhasaeed4903@gmail.com">talhasaeed4903@gmail.com</a></span>
+        <span>📍 Islamabad, Pakistan</span>
+        <span>🔗 <a href="https://github.com/M-Talha-Saeed1">GitHub</a></span>
+        <span>💼 <a href="https://M-Talha-Saeed1.github.io">Portfolio</a></span>
+      </div>
+    </header>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section>
+      <h2>Professional Summary</h2>
+      <p>Computer Science student at Bahria University with strong foundation in C++ programming, data structures, and algorithms. Committed to building efficient solutions through hands-on projects and continuous learning. Demonstrated ability to progress from fundamental programming concepts to advanced object-oriented design and algorithmic optimization.</p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+      <h2>Education</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Bachelor of Science in Computer Science</span>
+          <span class="entry-meta">In Progress</span>
+        </div>
+        <div class="entry-description">
+          Bahria University, Islamabad, Pakistan
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+      <h2>Projects</h2>
+      
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">BU Gram – Social Media Platform</span>
+          <span class="entry-meta">Featured Project</span>
+        </div>
+        <div class="entry-description">
+          A dedicated social media platform designed for Bahria University students to connect, share experiences, and collaborate on academic and social activities.
+        </div>
+        <div class="tags">
+          <span class="tag">Web Application</span>
+          <span class="tag">Social Media</span>
+          <span class="tag">Student Platform</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Workout & Diet Planner</span>
+          <span class="entry-meta">Semester 1</span>
+        </div>
+        <div class="entry-description">
+          Console-based application built with fundamental C++ concepts for managing daily workout routines and dietary plans. Demonstrates basic programming logic and user interaction design.
+        </div>
+        <div class="tags">
+          <span class="tag">C++</span>
+          <span class="tag">Console Application</span>
+          <span class="tag">Fundamentals</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Workout & Diet Planner – OOP Version</span>
+          <span class="entry-meta">Semester 2</span>
+        </div>
+        <div class="entry-description">
+          Improved version leveraging Object-Oriented Programming concepts including classes, inheritance, and polymorphism. Showcases progression in software design skills and code organization.
+        </div>
+        <div class="tags">
+          <span class="tag">C++</span>
+          <span class="tag">OOP</span>
+          <span class="tag">Design Patterns</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Huffman Encoder</span>
+          <span class="entry-meta">Semester 3</span>
+        </div>
+        <div class="entry-description">
+          Data Structures and Algorithms implementation using Huffman coding for file compression. Demonstrates efficient algorithm design and tree-based data structure manipulation.
+        </div>
+        <div class="tags">
+          <span class="tag">C++</span>
+          <span class="tag">Data Structures</span>
+          <span class="tag">Algorithms</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <h2>Technical Skills</h2>
+      
+      <h3 style="color: #555; margin-top: 15px; margin-bottom: 10px;">Programming Languages</h3>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <span class="skill-name">C++</span>
+          <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Python</span>
+          <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">HTML & CSS</span>
+          <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">JavaScript</span>
+          <div class="skill-bar"><div class="skill-fill" style="width: 65%"></div></div>
+        </div>
+      </div>
+
+      <h3 style="color: #555; margin-top: 20px; margin-bottom: 10px;">Core Competencies</h3>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <span class="skill-name">Data Structures & Algorithms</span>
+          <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Object-Oriented Programming</span>
+          <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Problem Solving & Logic</span>
+          <div class="skill-bar"><div class="skill-fill" style="width: 88%"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Database Management Systems</span>
+          <div class="skill-bar"><div class="skill-fill" style="width: 60%"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Computer Organization & Assembly</span>
+          <div class="skill-bar"><div class="skill-fill" style="width: 65%"></div></div>
+        </div>
+      </div>
+
+      <h3 style="color: #555; margin-top: 20px; margin-bottom: 10px;">Tools & Platforms</h3>
+      <div class="tags">
+        <span class="tag">Git</span>
+        <span class="tag">GitHub</span>
+        <span class="tag">VS Code</span>
+        <span class="tag">Windows</span>
+        <span class="tag">Linux</span>
+        <span class="tag">Command Line</span>
+      </div>
+    </section>
+
+    <!-- STRENGTHS -->
+    <section>
+      <h2>Key Strengths</h2>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+        <div class="entry">
+          <div class="entry-title">Strong C++ Proficiency</div>
+          <div class="entry-description">
+            Proficient in C++ with experience in console applications, OOP, and data structures.
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-title">Algorithmic Problem Solving</div>
+          <div class="entry-description">
+            Strong analytical mindset with focus on efficient algorithm design through DSA.
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-title">Continuous Learner</div>
+          <div class="entry-description">
+            Dedicated to expanding knowledge in software development and computer fundamentals.
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-title">Full-Stack Curiosity</div>
+          <div class="entry-description">
+            Exploring web development and full-stack technologies to build complete applications.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERESTS -->
+    <section>
+      <h2>Interests & Goals</h2>
+      <p>Passionate about software development with a focus on building efficient, scalable solutions. Interested in exploring opportunities in backend development, systems programming, and algorithm optimization. Committed to continuous learning and contributing to meaningful projects that solve real-world problems.</p>
+    </section>
+
+  </div>
+</body>
+</html>
